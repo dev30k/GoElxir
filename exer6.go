@@ -1,22 +1,21 @@
 package main
 
-import (
-    "fmt"
-   
 
-
-)
 func camelcase(s string) int32 {
-    // Write your code here
-    for index,char := range s{
-      fmt.Printf("%-2d   %d",index,char)
-    }
-    
-
+	count := int32(1) // Initialize count as int32
+  
+	for _, c := range s {
+	  if int(c) >= 65 && int(c) <= 90 {
+		count += 1
+	  }
+	}
+  
+	return count
 }
 
 func main(){
-	
+	camelcase("saveChangesInTheEditor")
+
 }
 
 
